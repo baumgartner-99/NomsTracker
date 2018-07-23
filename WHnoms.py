@@ -1,3 +1,4 @@
+#this code scrapes all text from a single announcement
 import requests
 
 raw_html = requests.get('https://www.whitehouse.gov/presidential-actions/ten-nominations-sent-senate-today-4/')
