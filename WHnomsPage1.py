@@ -1,3 +1,4 @@
+#this page scrapes all of the urls from page 1 of the presidential action announcements
 import requests
 
 raw_html = requests.get('https://www.whitehouse.gov/presidential-actions/')
