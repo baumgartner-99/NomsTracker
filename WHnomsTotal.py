@@ -12,3 +12,7 @@ links = soup.findAll('a')
 for link in links:
     print(href)
 
+collection = ['hey', 5, 'd']
+for x in collection:
+    print(x)
+

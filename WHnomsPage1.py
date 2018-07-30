@@ -1,4 +1,5 @@
-#this page scrapes all of the urls from page 1 of the presidential action announcements
+#scrape urls from first page
+
 import requests
 
 raw_html = requests.get('https://www.whitehouse.gov/presidential-actions/')
@@ -17,7 +18,14 @@ html = list(soup.children)
 list(html)
 
 #pull all of urls from first page
+# link = []
+# for a in soup.find_all('a', href=True): 
+    # link.append(a)
+
+h2s = soup.find_all("h2")
 link = []
-for a in soup.find_all('a', href=True): 
-    link.append(a)
+for h2 in h2s:
+    link.append(h2.find("a", href=True))
+# link = list(h2s.find_all("a", href=True))
+
 print(link)
